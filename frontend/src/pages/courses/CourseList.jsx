@@ -10,12 +10,13 @@ import {
   TableRow,
   Tooltip,
 } from "@mui/material";
-import {
-  Delete,
-  Edit,
-  PersonAdd,
-  PersonRemove,
-} from "@mui/icons-material";
+
+// Direct icon imports to avoid EMFILE / too many open files issue
+import Delete from "@mui/icons-material/Delete";
+import Edit from "@mui/icons-material/Edit";
+import PersonAdd from "@mui/icons-material/PersonAdd";
+import PersonRemove from "@mui/icons-material/PersonRemove";
+
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -23,11 +24,13 @@ import { toast } from "react-toastify";
 import PageHeader from "../../components/PageHeader";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import ConfirmDialog from "../../components/ConfirmDialog";
+
 import {
   deleteCourse,
   getCourses,
   removeLecturer,
 } from "../../services/courseService";
+
 import { getErrorMessage } from "../../utils/errorMessage";
 import { useAuth } from "../../context/AuthContext";
 

@@ -1,11 +1,10 @@
-import {
-  Dashboard,
-  Group,
-  MenuBook,
-  Person,
-  School,
-  HowToReg,
-} from "@mui/icons-material";
+import Dashboard from "@mui/icons-material/Dashboard";
+import Group from "@mui/icons-material/Group";
+import MenuBook from "@mui/icons-material/MenuBook";
+import Person from "@mui/icons-material/Person";
+import School from "@mui/icons-material/School";
+import HowToReg from "@mui/icons-material/HowToReg";
+
 import {
   Drawer,
   List,
@@ -14,6 +13,7 @@ import {
   ListItemText,
   Toolbar,
 } from "@mui/material";
+
 import {
   Link,
   useLocation,

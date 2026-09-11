@@ -11,24 +11,27 @@ import {
   TableRow,
   Tooltip,
 } from "@mui/material";
-import {
-  Delete,
-  Edit,
-} from "@mui/icons-material";
+
+import Delete from "@mui/icons-material/Delete";
+import Edit from "@mui/icons-material/Edit";
+
 import {
   useEffect,
   useState,
 } from "react";
+
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 import PageHeader from "../../components/PageHeader";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import ConfirmDialog from "../../components/ConfirmDialog";
+
 import {
   deleteUser,
   getUsers,
 } from "../../services/userService";
+
 import { getErrorMessage } from "../../utils/errorMessage";
 
 const UserList = () => {
@@ -128,6 +131,7 @@ const UserList = () => {
               <TableCell>Email</TableCell>
               <TableCell>Role</TableCell>
               <TableCell>Status</TableCell>
+
               <TableCell align="right">
                 Actions
               </TableCell>
@@ -178,7 +182,7 @@ const UserList = () => {
                           user.role === "admin"
                             ? "error"
                             : user.role ===
-                              "lecturer"
+                                "lecturer"
                               ? "primary"
                               : "success"
                         }
@@ -240,10 +244,11 @@ const UserList = () => {
       <ConfirmDialog
         open={Boolean(selectedUser)}
         title="Delete User"
-        message={`Delete user ${selectedUser?.username ||
+        message={`Delete user ${
+          selectedUser?.username ||
           selectedUser?.email ||
           ""
-          }?`}
+        }?`}
         onCancel={() =>
           setSelectedUser(null)
         }

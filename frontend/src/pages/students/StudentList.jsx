@@ -11,25 +11,28 @@ import {
   TableRow,
   Tooltip,
 } from "@mui/material";
-import {
-  Delete,
-  Edit,
-  PhotoCamera,
-} from "@mui/icons-material";
+
+import Delete from "@mui/icons-material/Delete";
+import Edit from "@mui/icons-material/Edit";
+import PhotoCamera from "@mui/icons-material/PhotoCamera";
+
 import {
   useEffect,
   useState,
 } from "react";
+
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 import PageHeader from "../../components/PageHeader";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import ConfirmDialog from "../../components/ConfirmDialog";
+
 import {
   deleteStudent,
   getStudents,
 } from "../../services/studentService";
+
 import { getErrorMessage } from "../../utils/errorMessage";
 import { useAuth } from "../../context/AuthContext";
 

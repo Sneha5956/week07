@@ -10,24 +10,27 @@ import {
   TableRow,
   Tooltip,
 } from "@mui/material";
-import {
-  Delete,
-  Edit,
-} from "@mui/icons-material";
+
+import Delete from "@mui/icons-material/Delete";
+import Edit from "@mui/icons-material/Edit";
+
 import {
   useEffect,
   useState,
 } from "react";
+
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 import PageHeader from "../../components/PageHeader";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import ConfirmDialog from "../../components/ConfirmDialog";
+
 import {
   deleteEnrollment,
   getEnrollments,
 } from "../../services/enrollmentService";
+
 import { getErrorMessage } from "../../utils/errorMessage";
 import { useAuth } from "../../context/AuthContext";
 
@@ -37,8 +40,10 @@ const EnrollmentList = () => {
 
   const [enrollments, setEnrollments] =
     useState([]);
+
   const [loading, setLoading] =
     useState(true);
+
   const [
     selectedEnrollment,
     setSelectedEnrollment,
@@ -118,17 +123,26 @@ const EnrollmentList = () => {
               <TableCell>
                 Enrollment ID
               </TableCell>
+
               <TableCell>
                 Student ID
               </TableCell>
+
               <TableCell>
                 Course ID
               </TableCell>
+
               <TableCell>
                 Enrollment Date
               </TableCell>
-              <TableCell>Status</TableCell>
-              <TableCell>Grade</TableCell>
+
+              <TableCell>
+                Status
+              </TableCell>
+
+              <TableCell>
+                Grade
+              </TableCell>
 
               {canManage && (
                 <TableCell align="right">

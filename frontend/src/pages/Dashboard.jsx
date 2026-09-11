@@ -1,20 +1,21 @@
-import {
-  Group,
-  HowToReg,
-  MenuBook,
-  Person,
-  School,
-} from "@mui/icons-material";
+import Group from "@mui/icons-material/Group";
+import HowToReg from "@mui/icons-material/HowToReg";
+import MenuBook from "@mui/icons-material/MenuBook";
+import Person from "@mui/icons-material/Person";
+import School from "@mui/icons-material/School";
+
 import {
   Grid,
   Paper,
   Typography,
   Box,
 } from "@mui/material";
+
 import {
   useEffect,
   useState,
 } from "react";
+
 import { toast } from "react-toastify";
 
 import LoadingSpinner from "../components/LoadingSpinner";

@@ -11,25 +11,28 @@ import {
   TableRow,
   Tooltip,
 } from "@mui/material";
-import {
-  Delete,
-  Edit,
-  PhotoCamera,
-} from "@mui/icons-material";
+
+import Delete from "@mui/icons-material/Delete";
+import Edit from "@mui/icons-material/Edit";
+import PhotoCamera from "@mui/icons-material/PhotoCamera";
+
 import {
   useEffect,
   useState,
 } from "react";
+
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 import PageHeader from "../../components/PageHeader";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import ConfirmDialog from "../../components/ConfirmDialog";
+
 import {
   deleteLecturer,
   getLecturers,
 } from "../../services/lecturerService";
+
 import { getErrorMessage } from "../../utils/errorMessage";
 import { useAuth } from "../../context/AuthContext";
 
@@ -39,8 +42,10 @@ const LecturerList = () => {
 
   const [lecturers, setLecturers] =
     useState([]);
+
   const [loading, setLoading] =
     useState(true);
+
   const [
     selectedLecturer,
     setSelectedLecturer,
@@ -116,17 +121,23 @@ const LecturerList = () => {
           <TableHead>
             <TableRow>
               <TableCell>Photo</TableCell>
+
               <TableCell>
                 Lecturer ID
               </TableCell>
+
               <TableCell>Name</TableCell>
+
               <TableCell>Email</TableCell>
+
               <TableCell>
                 School
               </TableCell>
+
               <TableCell>
                 Designation
               </TableCell>
+
               <TableCell>Status</TableCell>
 
               {isAdmin && (

@@ -1,7 +1,6 @@
-import {
-  AccountCircle,
-  Logout,
-} from "@mui/icons-material";
+import AccountCircle from "@mui/icons-material/AccountCircle";
+import Logout from "@mui/icons-material/Logout";
+
 import {
   AppBar,
   Box,
